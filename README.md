@@ -8,4 +8,4 @@ Please use the requirements.txt file to load relevant packages.
 
 Data is included in the data folder.
 
-Clinical protocol is given.
+Clinical protocol is given in 19367.protocolv4.3.2022-08-23.pdf.
