@@ -85,8 +85,9 @@ def loadData(pathToData,patientId):
     patientDataDfC = patientDataDfC.reset_index()
 
     bstr=[]
-    for i in range(0,len(patientDataDfC['GnRH'])):
-        b=str(patientDataDfC['GnRH'].iloc[i])+str(patientDataDfC['Abi'].iloc[i])+str(patientDataDfC['ARSI'].iloc[i])
+    for i in range(0,len(patientDataDfC['ADT'])):
+        tmpARSI=int(np.ceil(patientDataDfC['ARSI'].iloc[i]))
+        b=str(patientDataDfC['ADT'].iloc[i])+str(patientDataDfC['Abi'].iloc[i])+str(tmpARSI)
         bstr.append(int(b,2))
     patientDataDfC['DrugIndex']=bstr
 
